@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Ext sample</title>
+<link rel="stylesheet" type="text/css" href="ext-3.3.0/resources/css/ext-all.css" />
+<script src="ext-3.3.0/adapter/ext/ext-base-debug.js" type="text/javascript"></script>
+<script src="ext-3.3.0/ext-all-debug.js" type="text/javascript"></script>
+<script>
+Ext.onReady(function() {
+  viewport = new Ext.Viewport({
+    layout: 'border',
+    items: [{
+      region: 'north',
+      html: 'North',
+      height: 60
+    },{ 
+      region: 'west', 
+      split: true, 
+      width: 200, 
+      html: 'West'
+    },{ 
+      region: 'center', 
+      layout: 'accordion',
+      items: [{
+        html: 'center 1' 
+      },{
+        html: 'center 2'
+      }],
+      bodyStyle: 'background-color: #eee;'
+    },{ 
+      region: 'east', 
+      split: true, 
+      width: 200, 
+      html: 'East'
+    },{ 
+      region: 'south', 
+      html: 'South'
+    }]
+  });
+});
+</script>
+</head>
+<body></body></html>
